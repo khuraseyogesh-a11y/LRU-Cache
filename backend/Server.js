@@ -8,7 +8,7 @@ const port=8080;
 const cors=require("cors");
 app.use(express.json());
 app.use(cors({
-    origin:["http://localhost:3000"],
+    origin:["https://lru-cache-1-ptjr.onrender.com"],
     credentials: true
 }));
 
