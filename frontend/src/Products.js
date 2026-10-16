@@ -6,7 +6,7 @@ const useEffect = React.useEffect;
 export default function(){
     let [products,setProducts]=React.useState([]);
     useEffect(()=>{
-        axios.get("http://localhost:8080/allProducts")
+        axios.get("https://lru-cache-656a.onrender.com/allProducts")
         .then((res)=>{
             setProducts(res.data.data);
         })

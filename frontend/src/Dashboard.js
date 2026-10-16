@@ -15,7 +15,7 @@ export default function(){
   let [entriesLastUsed, setEntriesLastUsed] = useState([]);
 
   useEffect(()=>{
-    axios.get("http://localhost:8080/Info").then((res)=>{
+    axios.get("https://lru-cache-656a.onrender.com/Info").then((res)=>{
      console.log(res.data.data);
      setEntries(res.data.data.size);
      setCapacity(res.data.data.capacity);
@@ -30,7 +30,7 @@ export default function(){
    
 
   useEffect(()=>{
-    axios.get("http://localhost:8080/allNodes").then((res)=>{
+    axios.get("https://lru-cache-656a.onrender.com/allNodes").then((res)=>{
       // console.log("Answer",res.data.data);
       setEntriesValue(res.data.data.values);
       setEntriesKey(res.data.data.ids);

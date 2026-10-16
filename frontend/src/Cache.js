@@ -27,7 +27,7 @@ export default function(){
      
         
        useEffect(()=>{
-        axios.get("http://localhost:8080/allNodes").then((res)=>{
+        axios.get("https://lru-cache-656a.onrender.com/allNodes").then((res)=>{
           setEntriesValue(res.data.data.values);
            setEntriesKey(res.data.data.ids);
         }).catch((err)=>{
@@ -53,7 +53,7 @@ export default function(){
        async function getCacheData(){
 
       
-        await axios.post("http://localhost:8080/getCache", {
+        await axios.post("https://lru-cache-656a.onrender.com/getCache", {
           
           id:getCache
           
@@ -74,7 +74,7 @@ export default function(){
 
       async function putCacheData(){
       
-       await axios.post("http://localhost:8080/putCache", {
+       await axios.post("https://lru-cache-656a.onrender.com/putCache", {
           id:putCacheKey,
           val:putCacheValue }).then((res)=>{
           console.log(res.data);
